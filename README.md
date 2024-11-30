@@ -1,4 +1,4 @@
-#paiza.ioのAPIとの通信を仲介してくれるサーバー
+# paiza.ioのAPIとの通信を仲介してくれるサーバー
 ## セットアップ
 ```bash
 pip install -r requirements.txt
