@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
 import requests
 import time
@@ -20,6 +21,10 @@ class CodeExecutionRequest(BaseModel):
     language: str
     api_key: str
     longpoll: bool
+    
+@app.get("/")
+async def get():
+    return HTMLResponse("Create By Ayuayuyu")
 
 @app.post("/run")
 async def run_code(request: CodeExecutionRequest):
